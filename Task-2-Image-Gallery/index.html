@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Simple Image Gallery</h2>
+
+  <div class="buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('people')">People</button>
+  </div>
+
+  <div class="gallery">
+    <img src="https://picsum.photos/id/1015/600/400" data-category="nature" onclick="openBox(this)">
+    <img src="https://picsum.photos/id/1011/600/400" data-category="nature" onclick="openBox(this)">
+    <img src="https://picsum.photos/id/1005/600/400" data-category="people" onclick="openBox(this)">
+    <img src="https://picsum.photos/id/1003/600/400" data-category="people" onclick="openBox(this)">
+  </div>
+
+  <div id="lightbox">
+    <span onclick="closeBox()">×</span>
+    <img id="boxImg">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
